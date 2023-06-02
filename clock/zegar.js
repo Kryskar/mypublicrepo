@@ -21,7 +21,7 @@ function time (){
     if (hoursDeg>=354){
         hoursDeg+=0.1/12
     }
-     hoursDeg = ((hours + minutesDeg/360)/12)*360
+     hoursDeg = ((hours + ((minutes+ seconds/60)/60))/12)*360
 
     secondHand.style.transform = `rotate(${secondsDeg}deg)`
     minuteHand.style.transform = `rotate(${minutesDeg}deg)`
