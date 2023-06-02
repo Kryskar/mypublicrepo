@@ -1,0 +1,51 @@
+#container{
+    position: fixed;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    width: 25vw;
+    height: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#clockBoard{
+    width:97%;
+    height:97%;
+    border: 2px black solid;
+    border-radius: 50%;
+    display: flex;
+    position: relative;
+    
+}
+
+#secondHand{
+    position: absolute;
+    left: 50%;
+    width: 1.5%;
+    height: 50%;
+    transform-origin: bottom center;
+    background-color: blue;
+    z-index: 3;
+    transition: transform 0.9s ease-in-out;
+}
+
+#minuteHand{
+    position: absolute;
+    left: 50%;
+    width: 2%;
+    height: 50%;
+    transform-origin: bottom center;
+    background-color: violet;
+    z-index: 2;
+}
+
+#hourHand{
+    position: absolute;
+    left: 50%;
+    width: 3%;
+    height: 50%;
+    transform-origin: bottom center;
+    background-color: orangered;
+    z-index: 1;
+}

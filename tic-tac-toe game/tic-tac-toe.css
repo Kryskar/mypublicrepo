@@ -1,0 +1,186 @@
+.container{
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+width: 30vh;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+
+
+}
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px black solid ;
+    width: 10vh;
+    height: 10vh;
+}
+
+.e1{
+ border-left: 0;
+ border-top: 0;
+ position:relative    
+}
+.e2{
+border-top: 0;
+position:relative    
+}
+.e3{
+border-top: 0;
+border-right: 0;
+position:relative    
+}
+.e4{
+border-left: 0;
+position:relative     
+}
+.e5{
+position:relative 
+}
+.e6{
+border-right: 0;
+position:relative     
+}
+.e7{
+    border-left: 0;
+    border-bottom: 0;
+    position:relative    
+   }
+   .e8{
+   border-bottom: 0;
+   position:relative     
+   }
+   .e9{
+   border-bottom: 0;
+   border-right: 0;
+   position:relative     
+   }
+
+.board:hover{
+    transition: background-color 500ms;
+    background-color: crimson;
+}
+
+.circle{
+    height: 75%;
+    width: 75%;
+    border: 7px black solid;
+    border-radius: 50%;
+    pointer-events: none; 
+}
+
+.symbol-x {
+    width: 110%; 
+    height: 110%; 
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -0%); 
+    border: 0px solid black;
+    pointer-events: none; 
+}
+.symbol-x::before,
+.symbol-x::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 7px; 
+  background-color: black; 
+}
+.symbol-x::before {
+    transform: rotate(45deg);
+}
+.symbol-x::after {
+    transform: rotate(-45deg);
+}
+
+.liner1{
+height:7px;
+width:130%;
+background-color: red;
+position:fixed;
+top: 15.5%;
+translate: -10% 0;
+pointer-events: none;
+}
+
+.liner2{
+height:7px;
+width:130%;
+background-color: red;
+position:fixed;
+top: 49.5%;
+translate: -10% 0;
+pointer-events: none; 
+}
+
+.liner3{
+height:7px;
+width:130%;
+background-color: red;
+position:fixed;
+top: 83.3%;
+translate: -10% 0;
+pointer-events: none; 
+}
+
+.lineh1{
+height:7px;
+width:130%;
+background-color: red;
+position:fixed;
+top: 47.5%;
+right: 4.9%;
+translate: -10.5% 0;
+pointer-events: none;
+transform: rotate(90deg)
+}
+
+.lineh2{
+height:7px;
+width:130%;
+background-color: red;
+position:fixed;
+top: 47.5%;
+translate: -10.5% 0;
+pointer-events: none;
+transform: rotate(90deg)
+}
+
+.lineh3{
+height:7px;
+width:130%;
+background-color: red;
+position:fixed;
+top: 47.5%;
+left: 34.7%;
+translate: -10.5% 0;
+pointer-events: none;
+transform: rotate(90deg)
+}
+
+.linex1{
+height:7px;
+width:170%;
+background-color: red;
+position:fixed;
+top: 50%;
+left: 50.2%;
+translate:-50% -50%;
+pointer-events: none;
+transform: rotate(45deg)
+}
+
+.linex2{
+height:7px;
+width:170%;
+background-color: red;
+position:fixed;
+top: 50%;
+left: 52.4%;
+translate:-50% -50%;
+pointer-events: none;
+transform: rotate(-45deg)
+}
