@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="boom.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<body id="body">
+    <br>
+    <div id="div1" class="block">
+        <span id = boom span> Don't click 
+
+        </span><br>
+    
+    <button id="start" class="glow-on-hover">Czas start</button>
+    <label for="setsec">choose time (s)</label>
+    <input id="setsec" type="number" min="1" max="30" placeholder="num (s)" >    
+</div>
+<!-- <div id="div2"></div> -->
+    <script>
+        let boom = document.getElementById("boom");
+        let start = document.getElementById("start");
+        let setsecInput = document.getElementById("setsec");
+        let newDiv;
+        let odliczanie;
+
+        function countdown(seconds){
+            if (seconds == 0) {
+                //console.log("boom")
+                boom.innerHTML = "boom"
+                newDiv = document.createElement("div");
+                newDiv.id = "div2";
+                body.appendChild(newDiv);
+            } else if (seconds<=60 && seconds>0) {
+                //console.log("time remaining: " + seconds)
+                boom.innerHTML = "time remaining: " + seconds
+            }
+
+       odliczanie = setTimeout(() => {
+            countdown(seconds -1)
+        }, 1000);
+    }
+
+    let boomTimeout;
+        function startit(){
+        if (odliczanie) {
+            clearTimeout(odliczanie);
+        }
+        clearTimeout(boomTimeout);
+        boom.innerHTML="";
+
+        if (newDiv) {
+        body.removeChild(newDiv);
+        newDiv = null;
+      }
+
+        let secondsstart = setsecInput.value;
+        countdown(secondsstart);
+        //console.log(parseInt(setsecInput.value))
+        let boomAnimationTimer = parseInt(setsecInput.value)*1000 -60
+        boomTimeout = setTimeout(() =>{
+            boom.classList.add("boom1");}, boomAnimationTimer);
+
+        if (boomAnimationTimer) {
+        boom.classList.remove("boom1");
+      }
+  
+    }
+    start.addEventListener("click", startit)
+
+    </script>
+</body>
+</html>
