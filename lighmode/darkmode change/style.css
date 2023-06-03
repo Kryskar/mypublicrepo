@@ -1,3 +1,83 @@
+*{
+    font-family: didact gothic;
+}
+
+body{
+    padding-left: 15%;
+    padding-right: 15%
+}
+
+:root{
+--backgroundColor: red;    
+}
 h1 {
     margin-top: 5%
+}
+#container{
+    position:relative;
+    border: 2px black solid;
+    width:5vw;
+    height: 2vw;
+    border-radius: 35%;
+    background-color: black;
+
+}
+
+#sun{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    margin-top: 3px;
+    margin-left: 3px;
+    font-weight: bold;
+    color: yellow;
+}
+input{
+    position: absolute;
+}
+
+#moon{
+    position: absolute;
+    margin-top: 3px;
+    font-weight: bold;
+    color: orange;
+    transform: translate(240%);
+}
+
+a{
+text-decoration: none;
+color: black;
+font-weight: bold;
+}
+
+h2{
+    margin-top: 30px;
+}
+.border{
+    border-bottom: 1px dotted black;
+    height: 15px;
+}
+
+label{
+    font-size: 1.6vw;
+}
+.ball{
+    margin-left: 2px;
+    margin-bottom: 10px;
+    position: absolute;
+    height: 35px;
+    width:35px;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.3s;
+}
+
+.checkbox:checked ~ .ball{
+    transform: translateX(51px);
+}
+.checkbox{
+    display: none
 }
