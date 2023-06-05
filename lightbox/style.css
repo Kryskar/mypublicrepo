@@ -1,0 +1,152 @@
+:root{
+    --primary-color: #2b2b2b;
+    --secondary-color: #777;
+    --bg-color: #fff;
+    --font-color: #424242;
+    --heading-color: #282828;
+    }
+    [data-theme='dark']{
+    --primary-color: #d9d9d9;
+    --secondary-color: #818181;
+    --bg-color: #151515;
+    --font-color: #e1e1e1;
+    --heading-color: #777;    
+    }
+
+*{
+    font-family: didact gothic;
+}
+
+body{
+    padding-left: 15%;
+    padding-right: 15%;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+}
+
+h{
+color: var(--heading-color);    
+}
+
+h1 {
+    margin-top: 5%
+}
+#container{
+    margin-left: auto;
+    position:relative;
+    border: 1px black solid;
+    width:4vw;
+    height: 2vw;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    align-items: center;
+
+}
+
+#moon{
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    margin: auto;
+    margin-top: 3px;
+    margin-left: 6px;
+    font-weight: bold;
+    color: orange;
+}
+input{
+    position: absolute;
+}
+
+#sun{
+    position: absolute;
+    margin-top: 3px;
+    font-weight: bold;
+    color: yellow;
+    transform: translate(140%);
+}
+
+a{
+text-decoration: none;
+color: var(--primary-color);
+font-weight: bold;
+}
+
+a:hover{
+color: var(--secondary-color)
+}
+
+h2{
+    margin-top: 30px;
+}
+.border{
+    border-bottom: 1px dotted var(--font-color);
+    height: 15px;
+}
+
+label{
+    font-size: 1.6vw;
+}
+.ball{
+    position: absolute;
+    height: 1.8vw;
+    width:1.8vw;
+    background-color: white;
+    border: 2px black solid;
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.3s;
+}
+
+.checkbox:checked ~ .ball{
+    transform: translateX(100%);
+}
+.checkbox{
+    display: none
+}
+
+#lightbox{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 20vw;
+    height: 35vh;
+    border: 1px black solid;
+    background-color:whitesmoke;
+    color:#151515;
+    z-index: 1;
+}
+
+div h3{
+    font-size: 1.1vw;
+    text-align: center;
+    margin-top: 15%;
+}
+
+div h4{
+    font-size: 0.9vw;
+    text-align: center;
+    margin-top: 25%;
+}
+div button{
+    padding: 0.3vw;
+    margin: 1vw;
+    text-align: center;
+    font-weight: bold;
+}
+#yesNo{
+  display: flex;
+  justify-content: center;  
+}
+.yes{
+background-color: rgb(152, 231, 34);
+}
+
+.no{
+background-color: orangered;    
+}
+
+.page{
+    filter: blur(10px) brightness(5%);
+    z-index: 2;
+}
