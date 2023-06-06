@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <style>
+        body{
+            background-color: black;
+            font-family: Abel;
+        }
+        .navigation{
+           /* border: 1px white solid;*/
+            max-width: 400px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 15%;
+            margin-top: 1.5%;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        .icon{
+            position: absolute;
+            top: 2%;
+            left:8%;
+            background-color: #1cddbc;
+            width: fit-content;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .icon img{
+            height:100px
+        }
+        .contact{
+            position: absolute;
+            right: 15%;
+            top: 3%;
+            background-color:#1cddbc;
+            width: fit-content;
+            padding:10px;
+            padding-left: 30px;
+            padding-right: 30px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .container{
+            /*border: 1px white solid;*/
+            height: 90vh;
+            display: flex;
+            align-items: center;
+        }
+
+        .photo{
+            margin-left:10px;
+            width: 500px;
+            height: 600px;
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/1280px-Elon_Musk_Royal_Society.jpg);
+            background-size: cover;
+        }
+        .headder {
+            font-size: 30px;
+        }
+        .text{
+        padding-left:400px ;
+         width: 1000px;
+         height: 550px;
+         color:white;
+         font-size: 80px;   
+        }
+        .colorText{
+         color: #1cddbc;   
+        }
+        .downloadCv{
+            border: 2px #1cddbc solid;
+            width: fit-content;
+            padding: 5px 20px 5px 20px;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        .description{
+            margin-bottom: 50px;
+            font-size: 20px;
+        }
+        .headderDev{
+            line-height: 0.9;
+            margin-bottom: 40px;
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="icon">
+        <img src="https://cdn-icons-png.flaticon.com/512/5024/5024509.png">
+    </div>
+    <nav class=navigation>
+        <a href="#">HOME</a>
+        <a href="#">ABOUT</a>
+        <a href="#">SERVICES</a>
+        <a href="#">BLOG</a>
+        <a href="#">MORE</a>
+    </nav>
+    <div class="contact">CONTACT</div>
+    <div class="container">
+        <div class="photo"></div>
+        <div class ="text">
+            <span class="headder colorText">CODEWITHRANDOM</span><br>
+            <div class="headderDev">I'm a Web<br>
+            <span class="colorText">Developer</span></div>
+            <div class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi dicta enim quidem sit a voluptate voluptates quam, suscipit esse quae iusto eligendi maxime accusamus veniam itaque explicabo corrupti alias modi?</div>
+            <div class="downloadCv colorText">DOWNLOAD CV</div>
+        </div>
+    </div>
+
+
+    <script>
+
+    </script>
+</body>
+</html>
