@@ -6,18 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body{
             background-color: black;
             font-family: Abel;
+            margin: 0;
+            padding: 0;
+        }
+        .mobileMenu{
+            display: none;
         }
         .navigation{
            /* border: 1px white solid;*/
             max-width: 400px;
             display: flex;
             justify-content: space-between;
-            margin-left: 15%;
-            margin-top: 1.5%;
+            margin-left: 200px;
+            margin-top: 25px;
         }
         a {
             color: white;
@@ -26,15 +32,15 @@
         }
         .icon{
             position: absolute;
-            top: 2%;
-            left:8%;
+            top: 20px;
+            left:130px;
             background-color: #1cddbc;
             width: fit-content;
             border-radius: 50%;
             overflow: hidden;
         }
         .icon img{
-            height:100px
+            height:60px
         }
         .contact{
             position: absolute;
@@ -61,12 +67,13 @@
             height: 600px;
             background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/1280px-Elon_Musk_Royal_Society.jpg);
             background-size: cover;
+            flex-shrink: 0;
         }
         .headder {
             font-size: 30px;
         }
         .text{
-        padding-left:400px ;
+        padding-left:25% ;
          width: 1000px;
          height: 550px;
          color:white;
@@ -90,11 +97,178 @@
             line-height: 0.9;
             margin-bottom: 40px;
         }
+
+        @media screen and (min-width:1440px) {
+            a, .contact{
+            font-size: 25px;
+            }
+            .downloadCv{
+                font-size: 30px;
+            }
+            .headder{
+                font-size: 35px;
+            }
+            .text{
+                font-size: 90px;
+            }
+            .description{
+                font-size: 23px;
+            }
+        }
+
+        @media screen and (min-width:2000px) {
+            body{
+                padding-left: 300px;
+                padding-right: 300px;
+            }
+            .icon{
+                margin-left: 330px;
+                margin-top: 10px;
+            }
+            .icon img{
+                height: 90px;
+            }
+            .navigation{
+                max-width: 600px;
+                margin-left:300px;
+            }
+            a, .contact{
+            font-size: 35px;
+            }
+            .downloadCv{
+                font-size: 40px;
+            }
+            .headder{
+                font-size: 55px;
+            }
+            .text{
+                font-size: 120px;
+                height: 700px;
+            }
+            .description{
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 1024px){
+            .text{
+                padding-left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 920px){
+            .navigation, .contact{
+                display: none;
+            }
+            .container{
+                flex-direction: column;
+                text-align: center;
+                padding-top: 50px;
+            }
+            .photo{
+                width:300px;
+                height: 360px;
+                margin-bottom:5%;
+                margin-top: 100px;
+            }
+            .text{
+                width: 600px;
+                padding-left: 0;
+                font-size: 70px;
+            }
+            .downloadCv{
+                margin: 0 auto;
+            }
+            .mobileMenu{
+                position: fixed;
+                width: 100%;
+                height: 60px;
+                background-image: linear-gradient(to right,#1cddbc, #1a7062);
+                display: block;
+            }
+
+            .icon{
+            top:3px;
+            left:5px;
+            position: fixed;
+            z-index: 0;
+            }
+            .icon img{
+                height: 50px;
+            }    
+            .menuItem {
+  display: block;
+  margin: 2rem 4rem;
+  font-size: 1.8rem;
+  color: white;
+  text-decoration: none;
+}
+
+.menuItem:hover {
+  color: #1cddbc;
+  cursor: pointer;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 100;
+  top: 1rem;
+  right: 1rem;
+  padding: 4px;
+  border: black solid 1px;
+  background: white;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-102%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  opacity: 80%;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+        }
+@media screen and (max-width:600px) {
+    .text{
+        width:300px;
+    }
+} 
         
 
     </style>
 </head>
 <body>
+    <div class="mobileMenu">
+        <div>
+        <ul class="menu">
+            <li><a class="menuItem" href="#">HOME</a></li>
+            <li><a class="menuItem" href="#">ABOUT</a></li>
+            <li><a class="menuItem" href="#">SERVICES</a></li>
+            <li><a class="menuItem" href="#">BLOG</a></li>
+            <li><a class="menuItem" href="#">MORE</a></li>
+            <li><a class="menuItem" href="#">CONTACT</a></li>
+          </ul>
+          <button class="hamburger">
+            <i class="menuIcon material-icons">menu</i>
+            <i class="closeIcon material-icons">close</i>
+          </button> 
+        </div>
+    </div>
     <div class="icon">
         <img src="https://cdn-icons-png.flaticon.com/512/5024/5024509.png">
     </div>
@@ -116,10 +290,34 @@
             <div class="downloadCv colorText">DOWNLOAD CV</div>
         </div>
     </div>
-
-
+    
     <script>
+        const menu = document.querySelector(".menu");
+const menuItems = document.querySelectorAll(".menuItem");
+const hamburger= document.querySelector(".hamburger");
+const closeIcon= document.querySelector(".closeIcon");
+const menuIcon = document.querySelector(".menuIcon");
 
+function toggleMenu() {
+  if (menu.classList.contains("showMenu")) {
+    menu.classList.remove("showMenu");
+    closeIcon.style.display = "none";
+    menuIcon.style.display = "block";
+    
+  } else {
+    menu.classList.add("showMenu");
+    closeIcon.style.display = "block";
+    menuIcon.style.display = "none";
+  }
+}
+
+hamburger.addEventListener("click", toggleMenu);
+
+menuItems.forEach( 
+  function(menuItem) { 
+    menuItem.addEventListener("click", toggleMenu);
+  }
+)
     </script>
 </body>
 </html>
